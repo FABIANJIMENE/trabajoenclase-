@@ -1,0 +1,60 @@
+package fundamentosdeprogramacion;
+
+import java.util.Scanner;
+
+public class calculadorados1 {
+	public static void calculadora1(int opcion) {
+		Scanner leer = new Scanner(System.in);
+
+		switch (opcion) {
+		case 1:
+			System.out.println("ingrese numero uno :");
+			int Numero1 = leer.nextInt();
+			System.out.println("ingrese numero dos :");
+			int Numero2 = leer.nextInt();
+			int Resultado = Numero1 + Numero2;
+			Resultado = (Numero1 + Numero2);
+			System.out.println("El resultado de la Suma es:" + Resultado);
+			break;
+		case 2:
+			System.out.println("ingrese numero uno :");
+			int Numero3 = leer.nextInt();
+			System.out.println("ingrese numero dos :");
+			int Numero4 = leer.nextInt();
+			int Resultado1 = Numero3 - Numero4;
+
+			System.out.println("El resultado de la Resta de " + Numero3 + " - " + Numero4 + " = " + Resultado1);
+			break;
+		case 3:
+			System.out.println("ingrese numero uno :");
+			int Numero5 = leer.nextInt();
+			System.out.println("ingrese numero dos :");
+			int Numero6 = leer.nextInt();
+			int Resultado2 = Numero5 * Numero6;
+
+			System.out.println("El resultado de la Multiplicación es:" + Resultado2);
+			break;
+		case 4:
+			System.out.println("ingrese numero uno :");
+			int Numero7 = leer.nextInt();
+			System.out.println("ingrese numero dos :");
+			int Numero8 = leer.nextInt();
+			int Resultado3 = Numero7 / Numero8;
+			if (Numero8 == 0) {
+				System.out.println("ERROR DIVISION ENTRE 0");
+
+			} else {
+				Resultado = (Numero7 / Numero8);
+				System.out.println("El resultado de la División es:" + Resultado);
+				break;
+			}
+
+		}
+	}
+
+	public static void main(String[] args) {
+
+		System.out.println("INGRESE 1 PARA SUMA\nINGRESE DOS PARA RESTA\nINGRESE 3 PARA MULTIPLICACION");
+		Scanner leer = new Scanner(System.in);
+		int opcion = leer.nextInt();
+		calculadora1(opcion);
