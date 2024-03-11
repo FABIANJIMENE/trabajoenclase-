@@ -1,0 +1,48 @@
+package fundamentosdeprogramacion;
+
+import java.util.Scanner;
+
+public class fibonacci {
+
+	public static int serie(int n) {
+
+		int i, a = 0, b = 1, c = 0;
+
+		if (n < 1) {
+			System.out.print("El número debe ser positivo...");
+			return c ;
+		} else {
+			if (n == 1) {
+				System.out.print("\nLa serie Fibonacci generada es:\n\n");
+				System.out.print(a);
+			} else {
+				if (n == 2) {
+					System.out.print("\nLa serie Fibonacci generada es:\n\n");
+					System.out.print(a + " - " + b);
+				} else {
+					System.out.print("\nLa serie Fibonacci generada es:\n\n");
+					System.out.print(a + " - " + b);
+					for (i = 1; i <= n - 2; i++) {
+						c = a + b;
+						a = b;
+						b = c;
+						System.out.print(" - " + c);
+					}
+				}
+				return c;
+			}
+		}
+		return c;
+	}
+
+	public static void main(String[] args) {
+		Scanner leer = new Scanner(System.in);
+		System.out.print("Digite cuántos términos desea generar: ");
+		int n = leer.nextInt();
+		int resultado = serie(n);
+		if (resultado != -1) {
+			System.out.println("\nEl último número de la serie de Fibonacci generada es:\n " + resultado);
+
+		}
+	}
+}

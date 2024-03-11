@@ -1,0 +1,275 @@
+
+
+1.   ¿Qué es una variable en Java?
+Una variable en Java es un contenedor que almacena un valor que puede cambiar durante la ejecución del programa.
+
+Una variable en Java es una función que realiza cálculos matemáticos
+
+Una variable en Java es una etiqueta para identificar un bloque de código
+
+Una variable en Java es un tipo de comentario en el código
+
+
+19.   ¿Cuál es el resultado de la expresión (8 >= 8 || 4 < 3) en Java?
+Verdadero
+
+Falso
+
+Verdadero || Falso
+
+Verdadero && Falso
+
+
+21.   ¿Cuál es el resultado de la expresión (10 % 3) en Java?
+1
+
+2
+
+3
+
+0
+
+
+2.   ¿Cuáles son los tipos de datos primitivos en Java?
+string
+
+array
+
+object
+
+byte, short, int, long, float, double, char, boolean
+
+
+3.   ¿Cómo se declara una variable en Java?
+variable nombreDeVariable = valorInicial;
+
+nombreDeVariable = nuevoValor;
+
+tipoDeDato nombreDeVariable;
+
+tipoDeDato = nombreDeVariable;
+
+
+4.   ¿Cuál es la diferencia entre int y double en Java?
+int almacena números con decimales, mientras que double almacena números enteros en Java.
+
+La diferencia es que int almacena números enteros, mientras que double almacena números con decimales en Java.
+
+int solo se puede utilizar para operaciones matemáticas simples, mientras que double se puede utilizar para operaciones más complejas en Java.
+
+int y double son tipos de datos completamente iguales en Java.
+
+
+5.   ¿Qué son las estructuras de control en Java?
+Las estructuras de control en Java son declaraciones que permiten controlar el flujo de ejecución de un programa, como if-else, switch, bucles for, while, do-while, entre otros.
+
+Las estructuras de control en Java son instrucciones para la creación de interfaces gráficas
+
+Las estructuras de control en Java son variables que almacenan datos numéricos
+
+Las estructuras de control en Java son funciones predefinidas para realizar operaciones matemáticas
+
+
+6.   ¿Cuáles son los tres tipos de estructuras de control en Java?
+if-else, case, loops (for, while, do-while)
+
+if-else, repeat, bucles (for, while, do-while)
+
+if-else, select, loops (for, while, do-while)
+
+if-else, switch, bucles (for, while, do-while)
+
+
+7.   ¿Cuál es el comando de Git para ver el estado de los archivos modificados?
+git add
+
+git log
+
+git status
+
+git diff
+
+
+8.   ¿Qué es la conversión de tipos de datos en Java?
+La conversión de tipos de datos en Java se refiere al proceso de cambiar un tipo de dato a otro, ya sea de forma implícita o explícita.
+
+La conversión de tipos de datos en Java se refiere a la eliminación de ciertos tipos de datos
+
+La conversión de tipos de datos en Java se refiere a la traducción de datos a un idioma diferente
+
+La conversión de tipos de datos en Java se refiere a la creación de nuevos tipos de datos
+
+
+9.   ¿Cuál es la diferencia entre casting implícito y explícito en Java?
+El casting explícito es automático y el casting implícito requiere una conversión manual
+
+El casting implícito solo se aplica a tipos primitivos
+
+La diferencia radica en que el casting implícito es automático y el casting explícito requiere una conversión manual.
+
+El casting implícito es más lento que el casting explícito
+
+
+10.   ¿Cuál es el operador de asignación en Java?
++
+
+*
+
+=
+
+-
+
+
+11.   ¿Cuáles son los operadores aritméticos en Java?
+suma (+), resta (-), multiplicación (*), división (/), módulo (%), incremento (++) y decremento (--)
+
+comparación (==)
+
+concatenación (+)
+
+exponenciación (**)
+
+
+12.   ¿Cómo se realiza la operación de incremento en Java?
+Usando el método increment()
+
+Utilizando el operador ++.
+
+Aplicando la función addOne()
+
+Utilizando el operador +=
+
+
+13.   ¿Cuál es el operador de relación para verificar si dos valores son iguales en Java?
+===
+
+==
+
+<>
+
+!=
+
+
+14.   ¿Cuáles son los operadores lógicos en Java?
+?? (null coalescing), : (ternary)
+
+| (bitwise OR), & (bitwise AND)
+
+&& (AND), || (OR) y ! (NOT)
+
+++ (increment), -- (decrement)
+
+
+15.   ¿Cuál es el resultado de la expresión (5 > 3 && 2 < 4) en Java?
+Verdadero
+
+Verdadero && Falso
+
+Falso
+
+Verdadero || Falso
+
+
+16.   ¿Qué hace el operador de negación (!) en Java?
+Concatena dos expresiones booleanas
+
+Ignora una expresión booleana
+
+Invierte el valor de una expresión booleana
+
+Convierte una expresión booleana a un valor numérico
+
+
+17.   ¿Cómo se realiza un commit en Git?
+Se realiza un commit en Git con el comando 'git push'
+
+Se realiza un commit en Git con el comando 'git merge'
+
+Se realiza un commit en Git con el comando 'git checkout'
+
+Se realiza un commit en Git agregando los archivos modificados al área de preparación con 'git add' y luego utilizando el comando 'git commit -m 'mensaje del commit'
+
+
+18.   ¿Qué hace el operador de módulo (%) en Java?
+Devuelve el cociente de una división
+
+Devuelve el resto de una división
+
+Realiza una multiplicación
+
+Realiza una resta
+
+
+20.   ¿Cuál es la diferencia entre un while y un do-while en Java?
+El while se ejecuta al menos una vez, mientras que el do-while puede que no se ejecute nunca.
+
+El while se utiliza para bucles infinitos, mientras que el do-while se utiliza para bucles finitos.
+
+El while se ejecuta al final del programa, mientras que el do-while se ejecuta al principio.
+
+El while se utiliza para bucles finitos, mientras que el do-while se utiliza para bucles infinitos.
+
+
+22.   ¿Cuál es el operador de comparación para verificar si un valor es mayor o igual en Java?
+>
+
+>=
+
+<=
+
+<
+
+
+23.   ¿Qué es un bucle for en Java?
+Un bucle que se ejecuta al menos una vez
+
+Un bucle que se ejecuta un número específico de veces
+
+Un bucle que se ejecuta de forma indefinida
+
+Un bucle que se ejecuta solo si se cumple una condición
+
+
+24.   ¿Cuál es la diferencia entre un bucle for y un bucle while en Java?
+Un bucle for se utiliza para un número específico de iteraciones, mientras que un bucle while se utiliza para iteraciones basadas en una condición.
+
+Un bucle for se ejecuta al menos una vez, mientras que un bucle while puede que no se ejecute nunca.
+
+Un bucle for se utiliza para bucles infinitos, mientras que un bucle while se utiliza para bucles finitos.
+
+Un bucle for se ejecuta al final del programa, mientras que un bucle while se ejecuta al principio.
+
+
+25.   ¿Cuáles son los operadores lógicos en Java?
+?? (null coalescing), : (ternary)
+
+| (bitwise OR), & (bitwise AND)
+
+&& (AND), || (OR) y ! (NOT)
+
+++ (increment), -- (decrement)
+
+
+26.   ¿Cuál es el resultado de la expresión (7 >= 7 && 3 < 5) en Java?
+Verdadero
+
+Verdadero && Falso
+
+Falso
+
+Verdadero || Falso
+
+
+27.   ¿Cuál es la diferencia entre un bucle do-while y un bucle while en Java?
+El bucle do-while se ejecuta al menos una vez, mientras que el bucle while puede que no se ejecute nunca.
+
+El bucle do-while se utiliza para bucles infinitos, mientras que el bucle while se utiliza para bucles finitos.
+
+El bucle do-while se ejecuta al final del programa, mientras que el bucle while se ejecuta al principio.
+
+El bucle do-while se utiliza para bucles finitos, mientras que el bucle while se utiliza para bucles infinitos.
+
+
+28.   Cual es el comando para inicializar git
+Respuesta
+git init
