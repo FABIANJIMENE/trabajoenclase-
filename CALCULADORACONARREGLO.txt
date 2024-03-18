@@ -1,0 +1,96 @@
+package fundamentosdeprogramacion;
+import java.util.Scanner;
+public class calculadora54 {
+
+	public static void main(String[] args) {
+		
+		    Scanner scanner = new Scanner(System.in);
+
+	        // Pedir al usuario que ingrese la cantidad de números
+	        System.out.print("Ingrese la cantidad de números que desea operar: ");
+	        int cantidadNumeros = scanner.nextInt();
+
+	        // Crear un arreglo para almacenar los números
+	        double[] numeros = new double[cantidadNumeros];
+
+	        // Pedir al usuario que ingrese los números
+	        for (int i = 0; i < cantidadNumeros; i++) {
+	            System.out.print("Ingrese el número " + (i + 1) + ": ");
+	            numeros[i] = scanner.nextDouble();
+	        }
+
+	        // Mostrar las operaciones disponibles
+	        System.out.println("\nOperaciones disponibles:");
+	        System.out.println("1. Suma");
+	        System.out.println("2. Resta");
+	        System.out.println("3. Multiplicación");
+	        System.out.println("4. División");
+
+	        // Pedir al usuario que seleccione una operación
+	        System.out.print("Seleccione la operación que desea realizar (1-4): ");
+	        int opcion = scanner.nextInt();
+
+	        // Realizar la operación seleccionada
+	        double resultado = 0;
+	        switch (opcion) {
+	            case 1:
+	                resultado = sumar(numeros);
+	                break;
+	            case 2:
+	                resultado = restar(numeros);
+	                break;
+	            case 3:
+	                resultado = multiplicar(numeros);
+	                break;
+	            case 4:
+	                resultado = dividir(numeros);
+	                break;
+	            default:
+	                System.out.println("Opción no válida");
+	                return;
+	        }
+
+	        // Mostrar el resultado
+	        System.out.println("El resultado es: " + resultado);
+
+	        scanner.close();
+	    }
+
+	    public static double sumar(double[] numeros) {
+	        double resultado = 0;
+	        for (double numero : numeros) {
+	            resultado += numero;
+	        }
+	        return resultado;
+	    }
+
+	    public static double restar(double[] numeros) {
+	        double resultado = numeros[0];
+	        for (int i = 1; i < numeros.length; i++) {
+	            resultado -= numeros[i];
+	        }
+	        return resultado;
+	    }
+
+	    public static double multiplicar(double[] numeros) {
+	        double resultado = 1;
+	        for (double numero : numeros) {
+	            resultado *= numero;
+	        }
+	        return resultado;
+	    }
+
+	    public static double dividir(double[] numeros) {
+	        double resultado = numeros[0];
+	        for (int i = 1; i < numeros.length; i++) {
+	            if (numeros[i] == 0) {
+	                System.out.println("¡Error! No se puede dividir por cero.");
+	                return Double.NaN;
+	            }
+	            resultado /= numeros[i];
+	        }
+	        return resultado;
+	    }
+	
+
+	}
