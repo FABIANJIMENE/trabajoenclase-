@@ -1,0 +1,72 @@
+package fundamentosdeprogramacion;
+
+import java.util.Scanner;
+
+public class NOTASPRE {
+
+	public static void main(String[] args) {
+		 double  prom =0;
+		 int ex =0, bu=0 ,in=0, re=0;
+		int calificaciones = 0;
+		System.out.println("CANTIDAD DE NOTAS A CALIFICAR :");
+
+		Scanner leer = new Scanner(System.in);
+		calificaciones = leer.nextInt();
+		int[] cal = new int[calificaciones];
+		int max = 0;
+		int min = 100;
+		for (int i = 0; i < cal.length; i++) {
+			System.out.println("INGRESE LA NOTA " + (i + 1) + ":");
+			cal[i] = leer.nextInt();
+
+			if (cal[i] < 0 || cal[i] > 100) {
+				System.out.println("ERROR");
+				i--;
+			}
+
+		}
+		for (int i=0 ; i< cal.length; i++) {
+			if (cal [i] > max ) {
+				max = cal[i];
+				
+			}
+			if (cal [i]< min ) {
+				min = cal [i];
+				
+			}
+				
+			}
+			
+		System.out.println("LA CALIFICACION MAS ALTA ES " + max);
+		System.out.println("LA CALIFICACION MAS BAJA ES " + min);
+		for (int i=0 ; i< cal.length; i++) {
+			prom += cal [i];
+		}
+		prom = prom/ calificaciones ;
+		System.out.println("EL PROMEDIO ES  " + prom);
+		for (int i=0 ; i< cal.length; i++) {
+			if (cal [i]>= 90 ) {
+				ex++;
+				
+			}else {
+				if (cal [i]>= 70 && cal [i]<= 89 ) {
+					bu++;
+				}else {
+					if (cal [i]>= 50 && cal [i]<= 69 ) {
+						re++;
+					}else {
+						in ++;
+					}
+				}
+			}
+		}
+		System.out.println("CANTDAD DE ESTUDIANTES CON NOTA EXCELENTE SON:"+ ex);
+		System.out.println("CANTDAD DE ESTUDIANTES CON NOTA BUENA SON:"+ bu);
+		System.out.println("CANTDAD DE ESTUDIANTES CON NOTA REGULAR SON:"+ re);
+		System.out.println("CANTDAD DE ESTUDIANTES CON NOTA INSUFICIENTE  SON:"+ in);
+
+		
+
+	}
+}
+	
