@@ -1,0 +1,86 @@
+package fundamentosdeprogramacion;
+import java.util.Scanner;
+
+public class NUEVO {
+	
+
+		public static void main(String[] args) {
+
+			Scanner leer = new Scanner(System.in);
+			System.out.print("NUMERO DE ESTUDIANTES A SACAR SU PROMEDIO: ");
+			int n = leer.nextInt();
+			int cal[] = new int[n];
+			incal(cal, leer);
+			calcu(cal, leer);
+			distri(cal, leer);
+
+		}
+
+		private static void incal(int[] calificaciones, Scanner leer) {
+
+			for (int i = 0; i < calificaciones.length; i++) {
+				System.out.print("\nINGRESE SU CALIFICACION " + (i + 1) + ": ");
+				calificaciones[i] = leer.nextInt();
+
+				if (calificaciones[i] < 0 || calificaciones[i] > 100) {
+					System.out.print("ERROR LAS CALIFICACIONES DEBEN ESTAR ENTRE 0 Y 100");
+					calificaciones[i] = leer.nextInt();
+
+				}
+			}
+		}
+
+		private static void calcu(int[] calificaciones, Scanner leer) {
+			double prom = 0;
+			int Maxcalificaciones = 0, Mincal = 100;
+			for (int i = 0; i < calificaciones.length; i++) {
+				if (calificaciones[i] > Maxcalificaciones) {
+					Maxcalificaciones = calificaciones[i];
+				}
+				if (calificaciones[i] < Mincal) {
+					Mincal = calificaciones[i];
+				}
+			}
+			System.out.println();
+			System.out.println("LA NOTA MAS ALTA ES: " + Maxcalificaciones);
+			System.out.println("LA NOTA MAS BAJA ES: " + Mincal);
+			System.out.println();
+			for (int i = 0; i < calificaciones.length; i++) {
+				prom = prom + calificaciones[i];
+
+			}
+			prom = prom / calificaciones.length;
+			System.out.println("EL PROMEDIO ES: " + prom);
+
+		}
+
+		private static void distri(int[] calificaciones, Scanner leer) {
+			int suma = 0, excelentes = 0, bueno = 0, regular = 0, insuficiente = 0;
+			for (int i = 0; i < calificaciones.length; i++) {
+
+				if (calificaciones[i] >= 90 && calificaciones[i ]<=100) {
+					excelentes++;
+				} else {
+					if (calificaciones[i] >= 70 && calificaciones[i] <= 89) {
+						bueno++;
+					} else {
+						if (calificaciones[i] >= 50 && calificaciones[i] <= 69) {
+							regular++;
+						} else {
+							insuficiente ++;
+						}
+					}
+				}
+			}
+			System.out.println("CANTIDAS DE ESTUDIANTES CON  NOTAS EXCELENTES SON: " + excelentes );
+			System.out.println("CANTIDAD DE ESTUDIANTES CON NOTA BUENA SON: " + bueno);
+			System.out.println("CANTIDAD DE ESTUDIANTES CON NOTA REGULAR SON: " + regular);
+			System.out.println("CANTIDAD DE ESTUDIANTES CON NOTA INSUFICIENTE SON: " + insuficiente);
+
+		}
+
+	
+
+	}
+
+
