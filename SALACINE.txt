@@ -1,0 +1,61 @@
+package fundamentosdeprogramacion;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class MATRIZCUADRADA {
+	static int i = 0;
+	static int j = 0;
+	static int cantidad;
+	static int[][] numeros;
+	public static int[][] generarNumeros(int n) {
+		Random rand = new Random();
+
+		numeros = new int[cantidad][cantidad];
+		for (i = 0; i < cantidad; i++) {
+			for (j = 0; j < cantidad; j++) {
+
+				numeros[i][j] = rand.nextInt(10);
+
+			}
+		}
+		return numeros;
+	}
+
+	public static void mostrarmatriz() {
+
+		for (i = 0; i < cantidad; i++) {
+			for (j = 0; j < cantidad; j++) {
+				System.out.print(numeros[i][j]);
+				System.out.print(" ");
+				
+					
+				}System.out.println();
+			}
+			
+		}
+	public static void multi(int [][]arreglo) {
+		
+		int izq = 1;
+		int dere = 1;
+		for (i = 0; i < arreglo.length; i++) {
+			izq *= arreglo[i][i];
+			dere *= arreglo[i][arreglo.length - 1 - i];
+		}
+		System.out.println(izq );
+		System.out.print(dere);
+	}
+
+	public static void main(String[] args) {
+
+		Scanner leer = new Scanner(System.in);
+		System.out.print("Digite el tamaño de la matriz cuadrada: ");
+		cantidad = leer.nextInt();
+
+		generarNumeros(cantidad);
+		mostrarmatriz();
+		multi(numeros);
+
+	}
+
+}
