@@ -1,0 +1,42 @@
+
+
+		package fundamentosdeprogramacion;
+		import java.util.Scanner;
+
+		public class segundoparcial {
+
+		    public static void main(String[] args) {
+		        int[] vector1 = new int[3];
+		        int[] vector2 = new int[3];
+
+		        Scanner leer = new Scanner(System.in);
+
+		        System.out.println("Ingrese los valores del primer vector:");
+		        for (int i = 0; i < 3; i++) {
+		            System.out.print("Valor " + (i + 1) + ": ");
+		            vector1[i] = leer.nextInt();
+		        }
+
+		        System.out.println("Ingrese los valores del segundo vector:");
+		        for (int i = 0; i < 3; i++) {
+		            System.out.print("Valor " + (i + 1) + ": ");
+		            vector2[i] = leer.nextInt();
+		        }
+
+		        int productoEscalar = calcularProductosEscalar(vector1, vector2);
+		        System.out.println("EL PRODUCTO ESCALAR DE LOS VECTORES ES: " + productoEscalar);
+		    }
+
+		    public static int calcularProductosEscalar(int[] vector1, int[] vector2) {
+		        if (vector1.length != vector2.length) {
+		            System.out.println("LOS VECTORES DEBEN TENER LA MISMA LONGITUD");
+		            return 0;
+		        }
+
+		        int productoEscalar = 0;
+		        for (int i = 0; i < vector1.length; i++) {
+		            productoEscalar += vector1[i] * vector2[i];
+		        }
+		        return productoEscalar;
+		    }
+		}
