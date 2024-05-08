@@ -1,0 +1,120 @@
+package Herencia;
+
+public class Electronico  {
+	String nombre;
+	double precio;
+	String marca;
+	
+	 public  Electronico (String nombre , double precio, String marca ) {
+		 this.nombre=nombre;
+		 this.marca=marca ;
+		 this.precio=precio;
+		 
+		 
+	 }
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+	
+	
+
+}
+//////////////////////////////////////////////////////////////////////
+
+
+
+package Herencia;
+
+public class Telefono extends Electronico{
+
+	String  modelo;
+	int almacenamiento;
+	
+		
+	
+	public Telefono(String nombre,double precio,String marca,String modelo ,int almacenamiento) {
+		super(nombre, precio, marca);
+		this.almacenamiento=almacenamiento;
+		this.modelo=modelo;
+		
+	}
+
+
+
+	public void Hacerllamada(int numero) {
+		System.out.println("LLAMAR");
+		
+	}
+	
+		
+	}
+///////////////////////////////////////////////////////////////////////////////////////
+
+package Herencia;
+
+public class Tableb extends Electronico {
+	String Tamañodepantalla;
+	String SistemaOp;
+	public Tableb(String nombre, double precio, String marca) {
+		super(nombre, precio, marca);
+		this.Tamañodepantalla=Tamañodepantalla;
+		this.SistemaOp=SistemaOp;
+		
+	}
+	public void InstalarApp(String instalar) {
+		System.out.println("INSTALAR");
+	}
+	
+
+	}
+/////////////////////////////////////////////////////////////////////////////////////////////////
+package Herencia;
+
+public class Portatil extends Electronico {
+	String Procesador;
+	String MemoriaRam;
+	public Portatil(String nombre, double precio, String marca, String Procesador, String MemoriaRam ) {
+		super(nombre, precio, marca);
+		this.Procesador=Procesador;
+		this.MemoriaRam=MemoriaRam;
+	}
+	public void Encender(String ENCENDER) {
+		System.out.println("ENCENDIENDO");
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+package Herencia;
+
+public class TiendaDeHerencia {
+	public static void main(String[] args) {
+
+		Telefono telefono = new Telefono("IPHONE15", 1.50000, "APPLE", "1570OIS", 512);
+		telefono.Hacerllamada(5);
+		Tableb tableta = new Tableb("iPad Pro", 1099.99, "Apple");
+		tableta.InstalarApp("instalando");
+		Portatil portatil = new Portatil("Hp", 6.000000, "hp latop", "Ryzen5000", "16ram");
+		portatil.Encender("ENCENDIENDO");
+	}
+
+}
